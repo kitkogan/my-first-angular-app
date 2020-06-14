@@ -24,10 +24,11 @@
 <ng-template #noServer><p>No server was created</p></ng-template>
 <app-server *ngFor="let server of servers"></app-server>
 <hr>
-<button
+  <button
   class="btn btn-dark"
-  (click)="showSecret = !showSecret">Display Details</button>
+  (click)="onToggleDetails()">Display Details</button>
   <p *ngIf="showSecret">Secret message</p>
+  <div *ngFor="let logItem of log">{{ logItem }}</div>
 <hr>
 
 
