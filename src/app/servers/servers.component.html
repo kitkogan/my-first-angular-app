@@ -26,8 +26,10 @@
 <hr>
 <button
   class="btn btn-dark"
-  (click)="onDisplayDetails()">Display Details</button>
-  <p *ngIf="display; else noDisplay">Secret message</p>
-  <ng-template #noDisplay><p>no detials to display</p></ng-template>
+  (click)="showSecret = !showSecret">Display Details</button>
+  <p *ngIf="showSecret">Secret message</p>
+<hr>
+
+
 
 

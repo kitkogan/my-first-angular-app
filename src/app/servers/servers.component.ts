@@ -13,7 +13,7 @@ export class ServersComponent implements OnInit {
   userName = '';
   serverCreated = false;
   servers = ['Testserver', 'Testserver 2'];
-  display = false;
+  showSecret = false;
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -34,9 +34,5 @@ export class ServersComponent implements OnInit {
 
   onResetUsername() {
     this.userName = '';
-  }
-
-  onDisplayDetails() {
-    this.display = true;
   }
 }
