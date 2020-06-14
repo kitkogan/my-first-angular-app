@@ -28,7 +28,11 @@
   class="btn btn-dark"
   (click)="onToggleDetails()">Display Details</button>
   <p *ngIf="showSecret">Secret message</p>
-  <div *ngFor="let logItem of log">{{ logItem }}</div>
+  <div
+    *ngFor="let logItem of log"
+    [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text' : logItem >= 5}"
+  >{{ logItem }}</div>
 <hr>
 
 
